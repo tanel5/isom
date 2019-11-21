@@ -1,1 +1,1 @@
-web: gunicorn isolation.wsgi
+web: gunicorn isolation.wsgi --log-file-
