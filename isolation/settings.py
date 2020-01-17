@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
-import django_heroku
 db_from_env = dj_database_url.config(conn_max_age=500)
 
 
@@ -34,7 +33,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['iso-energie.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -135,5 +134,3 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-django_heroku.settings(locals())

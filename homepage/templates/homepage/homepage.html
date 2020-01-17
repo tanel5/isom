@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>ISO-Environnement</title>
     {% load static %}
     <link
       rel="stylesheet"
@@ -15,132 +15,114 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header class="header">
       <a href="{% url 'homepage:homepage' %}"
         ><img
           class="logo"
-          src="static/homepage/images/logo_transparent.png"
+          src="static/homepage/images/logo.png"
           alt=""
       /></a>
-      <h2 class="eur">Spécialiste de l'isolation à 1€</h2>
-      <h2 class="fac">
-        Jusqu'à 30% de réduction <br />
-        sur vos factures d'énergie!
-      </h2>
+      <a style="text-decoration:none" href="#formulaire">
+        <div class="button">
+          <h1>▶ Testez votre eligibilité</h1>
+        </div>
+      </a>
+      <div class="tel">
+        <h2>
+        ☎ 07 07 07 07 07
+        </h2>
+      </div class="tel">
     </header>
+    <div class="text-intro">
+    </div>
+    <br>
+    <div class="form" id="formulaire">
+      <div class="divform">
+        <h1 class="trait">J'isole ma maison pour 1€</h1>
+        <p>Remplissez ce formulaire et nous vous recontacterons par la suite.</p>
+        <p>
+          Pas d'avance de frais ! L'isolation à 1 €, <b>c'est bien 1 € !</b>
+        </p>
+        <form method="post">
+          {% csrf_token %} {{ form.as_p }}
+          <p>
+            En soumettant votre demande de rappel, vous acceptez nos conditions
+            générales.
+          </p>
+          <input type="submit" class="submit" value="Envoyer" />
+        </form>
+        <br />
+      </div>
+    </div>
     <div class="text-1">
       <div class="s-text-1">
-        <p>Isolez votre logement pour seulement 1€ avec la loi Pope.</p>
+        <h2>Vos travaux d’isolation pour 1€</h2>
         <p>
-          L’état vise à améliorer la qualité de vie des français graçe à son
-          investissement pour la cause écologique.
+          Grâce au programme d'accompagnement Certificats d'économies d'énergie
+          (CEE) créé par le Ministère de l'environnement, les sociétés
+          polluantes (tel que Total, Edf, etc...) financent vos travaux
+          d'isolation en contrepartie d'une exonération de la taxe carbone. Si
+          vous êtes éligible au programme, vous n'aurez qu'à payer 1€ symbolique
+          pour vos travaux de rénovation. C'est tout!
         </p>
         <p>
-          Economisez jusqu'à 30% de vos factures énergétiques en isolant votre
-          logement pour seulement 1€.
-        </p>
-        <p>
-          Pour verifiez votre eligibilté et profiter de la prime énergie, rien
-          de plus simple. Remplissez le formulaire ci-dessous et un conseiller
-          vous contactera dans les plus brefs délais.
+          Financez vos travaux d'isolation pour vos combles, caves, mmurs, garages et
+          vides sanitaire pour 1€ seulement.
         </p>
       </div>
-      <div class="img1div">
+      <div>
         <img
           class="img1"
           src="static/homepage/images/image avec piece 1 eur.jpg"
         />
       </div>
     </div>
-    <div class="divform">
-      <div class="form" id="formulaire">
-        <h1>J'isole ma maison pour 1€</h1>
-        <p>Remplissez ce formulaire, on vous recontactera par la suite.</p>
-        <p>
-          Pas d'avance de frais ! L'isolation à 1 €, <b>c'est bien 1 € !</b>
-        </p>
-        <form method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <p>
-            En soumettant votre demande de rappel, vous acceptez nos conditions
-            générales.
-          </p>
-          <input type="submit" value="Envoyer" />
-        </form>
-        <br />
-      </div>
-    </div>
-    <div class="text-2">
-      <div class="img2div">
-        <img class="img2" src="static/homepage/images/iStock-1059676056.jpg" />
-      </div>
-      <div class="s-text-2">
-        <p>Votre isolation à 1€ seulement.</p>
-        <p>
-          Depuis l’introduction de la loi POPE n°2005-781 par l’état, les
-          fournisseurs d’énergie (Total, EDF, …) doivent compenser leurs
-          activités polluantes en finançant les travaux d'isolations des
-          particuliers afin d’éviter les pertes d’énergies d'après les articles
-          R221-1 à R221-13. Depuis 2016, le programme Pacte Energie France
-          propose alors aux ménages éligibles d’isoler les pièces adjacentes au
-          lieu de vie (combles, vide sanitaire, cave…) pour seulement un euro.
-          Vos travaux sont donc financés par les fournisseurs d’énergies. Il n'y
-          aura pas d'avance à faire.
-        </p>
-      </div>
-    </div>
     <div class="presse">
-      <h1 class="tv">Vu à la télévision:</h1>
-      <br />
-      <div class="video">
-        <iframe
-          class="tf1"
-          src="https://www.youtube.com/embed/x2o6wmEOZdI"
-          framboiser="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          class="fr3"
-          src="https://www.youtube.com/embed/U-T0iVXnhEs"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          class="d8"
-          src="https://www.youtube.com/embed/hPUHGxKCaNE"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          class="bfm"
-          src="https://www.youtube.com/embed/nSkqhFvmWQ8"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+    <h1>VU A LA TELEVISION!</h1>
+    <div>
+      <iframe class="video"
+        src="https://www.youtube.com/embed/x2o6wmEOZdI"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
-    <div class="ccl">
-      <h1>Pourquoi isoler votre maison ?</h1>
-      <p>
-        L’isolation permet d’éviter les pertes de chaleur et permet donc de
-        réduire les besoins d’énergies, isoler sa maison c’est donc économiser
-        jusqu'à 30% sur sa facture d’énergie, diminuer sa consommation et
-        réduire la pollution, des avantages économiques et écologique pour
-        seulement 1 euro. Nous vous proposons de poursuivre sur ce
-        <a
-          href="https://www.toutsurlisolation.com/Isolation-thermique/Benefices-de-l-isolation-thermique/Comparatif-entre-une-maison-avec-et-sans-isolation"
-          target="_blank"
-          >lien</a
-        >, cette page vous expliquera l’impact concret sur les économies
-        réalisées par l’isolation de votre maison.
-      </p>
+    </div>
+    <div>
+      <a style="text-decoration:none" href="#formulaire">
+        <div class="link">
+          <h1>▶ Testez votre eligibilité</h1>
+        </div>
+      </a>
+    </div>
+    <div>
+      <p class="text-2">
+        Depuis l’introduction de la loi POPE n°2005-781 par l’état, les
+        fournisseurs d’énergie (Total, EDF, …) doivent compenser leurs activités
+        polluantes en finançant les travaux d'isolations des particuliers afin
+        d’éviter les pertes d’énergies d'après les articles R221-1 à R221-13.
+        Depuis 2016, le programme Pacte Energie France propose alors aux ménages
+        éligibles d’isoler les pièces adjacentes au lieu de vie (combles, vide
+        sanitaire, cave…) pour seulement un euro. Vos travaux sont donc financés
+        par les fournisseurs d’énergies. Il n'y aura pas d'avance à faire.
+        L’Etat a défini des critères d’éligibilité précis pour l'isolation à 1 €
+        afin de favoriser l’accès aux économies d’énergie des foyers modestes.
+      </p class="text-2">
+        <img class="imgm" src="static/homepage/images/infographie-isolation2.png" />
       <div class="demarche">
+        <h1>Pourquoi isoler votre maison ?</h1>
+        <p>
+          L’isolation permet d’éviter les pertes de chaleur et permet donc de
+          réduire les besoins d’énergies, isoler sa maison c’est donc économiser
+          jusqu'à 30% sur sa facture d’énergie, diminuer sa consommation et
+          réduire la pollution, des avantages économiques et écologique pour
+          seulement 1 euro. Nous vous proposons de poursuivre sur ce
+          <a href="https://www.toutsurlisolation.com/Isolation-thermique/Benefices-de-l-isolation-thermique/Comparatif-entre-une-maison-avec-et-sans-isolation"
+            target="_blank">lien</a>, cette page vous expliquera l’impact concret sur les économies
+          réalisées par l’isolation de votre maison.
+        </p>
         <h1>Démarche à suivre :</h1>
         <ul>
           -Remplir le formulaire sur notre site
@@ -157,21 +139,21 @@
           seulement 1€ !
         </ul>
       </div>
-      <a style="text-decoration:none" href="#formulaire"
-        ><div class="link">
-          <h1>J'isole ma maison pour 1€</h1>
-        </div></a
-      >
+      <a style="text-decoration:none" href="#formulaire">
+        <div class="link">
+          <h1>▶ Testez votre eligibilité</h1>
+        </div>
+        </a>
     </div>
     <footer class="footer">
-      <a
-        class="cgu"
-        style="text-decoration:none"
-        href="{% url 'homepage:cgu' %}"
-        >Conditions générales d'utilisation</a
-      >
-      <br />
-      <p>ISO-énérgie 2019 © All Rights Reserved</p>
+        <a
+          class="cgu"
+          style="text-decoration:none"
+          href="{% url 'homepage:cgu' %}"
+          >Conditions générales d'utilisation</a
+        >
+        <br />
+        <p>iso-environnement 2020 © All Rights Reserved</p>
     </footer>
   </body>
 </html>

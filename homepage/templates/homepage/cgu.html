@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>ISO-Environnement</title>
     {% load static %}
     <link
       rel="stylesheet"
@@ -17,17 +17,18 @@
   </head>
   <body>
   <header class="header">
-      <a href="{% url 'homepage:homepage' %}"><img
-        class="logo"
-        src="static/homepage/images/logo_transparent.png"
-        alt=""
-      /></a>
-      <h2 class="eur">Spécialiste de l'isolation à 1€</h2>
-      <h2 class="fac">
-        Jusqu'à 30% de réduction <br />
-        sur vos factures d'énergie!
+    <a href="{% url 'homepage:homepage' %}"><img class="logo" src="static/homepage/images/logo.png" alt="" /></a>
+    <a style="text-decoration:none" href="{% url 'homepage:homepage' %}">
+      <div class="button">
+        <h1>▶ Testez votre eligibilité</h1>
+      </div>
+    </a>
+    <div class="tel">
+      <h2>
+        ☎ 07 07 07 07 07
       </h2>
-    </header>
+    </div class="tel">
+  </header>
   <div class="text">
         <h1>
 Conditions Générales d’Utilisation</h1>
@@ -76,12 +77,14 @@ Les présentes CGU sont régies par le droit français et relève de la compéte
 <br>
 Son adresse de courrier électronique est info.iso.energie@gmail.com et son numéro individuel d’identification TVA intracommunautaire XXX.
 <br>
-Le présent site internet est hébergé par la société AMEN – 12 – 14 Rond-Point des Champs-Élysées – 75008 Paris – www.amen.fr, joignable enregistré au RCS de Paris: 421 527 797 000 11..
+Le présent site internet est hébergé par la société PythonAnywhere LLP – 28 Ely Place, 3rd Floor – London EC1N 6TD, UK –
+www.pythonanywhere.com, joignable +44 20 7253 6372 par tel et info@pythonanywhere.com par courrier éléctronique.
   </div>
   <footer class="footer">
-      <a href="{% url 'homepage:cgu' %}">Conditions générales d'utilisation</a>
-      <br>
-      <p>ISO-énérgie 2019 © All Rights Reserved</p>
-    </footer>
+    <a class="cgu" style="text-decoration:none" href="{% url 'homepage:cgu' %}">Conditions générales d'utilisation</a>
+    <br />
+    <p>iso-environnement 2020 © All Rights Reserved</p>
+  </footer>
   </body>
-</html>
+  
+  </html>
